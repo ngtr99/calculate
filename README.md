@@ -1,4 +1,4 @@
-The application is created to calculate the cost and income: calculate-puie3rnf7-ngtrs-projects.vercel.app
+The application is created to calculate the cost and income: calculate-neon.vercel.app 
 
 <img width="513" alt="image" src="https://github.com/user-attachments/assets/d97d0fa8-251f-49a6-a81c-f6950c8c2e6c" />
 
