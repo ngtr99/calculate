@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <h1 >Calculate Cost and Income</h1>
+
+    <div class="container">
+
+        <h2 style="color: rgb(162, 33, 33);">Cost</h2>
+        <table id="cost">
+            <thead>
+            <tr style="color: white;">
+                <th style="background-color: rgb(175, 125, 44);">Item</th>
+                <th style="background-color: rgb(175, 125, 44);">Total</th>
+                <td><button id="add-cost"><span class="material-icons">add</span></button></td>
+            </tr>
+            </thead>
+            <tbody class="cost-container">
+            <tr>
+                <td><input type="text" id="cost-item" placeholder="Cost Item"></td>
+                <td><input type="text" id="cost-total" placeholder="Total"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2 style="color: rgb(33, 162, 35)">Income</h2>
+        <table id="income">
+            <thead>
+                <tr style="color: white;">
+                    <th style="background-color: rgb(34, 106, 50);">Item</th>
+                    <th style="background-color: rgb(34, 106, 50);">Amount</th>
+                    <td><button id="add-income"><span class="material-icons">add</span></button></td>
+                </tr>
+            </thead>
+            <tbody class="income-container">
+                <tr>
+                    <td><input type="text" id="income-item" placeholder="Income Item"></td>
+                    <td><input type="number" id="income-amount" placeholder="Amount"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 style="color: rgb(147, 79, 135)">Result</h2>
+        <div class="result">
+            <div style="display: flex; align-items: center;"> 
+                <span>Total Cost: </span>
+                <p id="total-cost" style="margin: 0 0 0 8px;"></p>
+            </div>
+            <div style="display: flex; align-items: center;"> 
+                <span>Total Income: </span>
+                <p id="total-income" style="margin: 0 0 0 8px;"></p>
+            </div>
+            <div style="display: flex; align-items: center;"> 
+                <span>Profit/Loss: </span>
+                <p id="profit-loss" style="margin: 0 0 0 8px;"></p>
+            </div>
+
+        </div>
+
+        <h2 style="color:rgb(71, 117, 182)">Analysis</h2>
+        <div class="analysis">
+            <p id="analysis-text">
+                <p id="significant-cost"></p>
+                <p id="significant-income"></p>
+                <p id="worst-cost"></p>
+                <p id="worst-income"></p>
+            </p>
+        </div>
+
+        <div class="buttons" style="text-align: center;">
+            <button id="calculate">Calculate</button>
+            <button id="reset">Reset</button>
+            <button id="export">Export</button>
+        </div>
+        
+
+
+    </div>
+</body>
+    <script src="cost.js"></script>
+    <link rel="stylesheet" href="style.css">
+</html>

@@ -1,0 +1,116 @@
+/* the font styles */
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+h1 {
+    font-size: 5vh;
+    font-size: 3vw;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-family: "Tagesschrift", system-ui;
+    color: rgb(72, 72, 181);
+}
+
+h2 {
+    font-size: 3vh;
+    font-size: 2vw;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
+
+button {
+    font-size: 1.5vh;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: olive;
+}
+
+.material-icons {
+    font-size: 2vh;
+    font-size: 2vw;
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="number"] {
+    font-size: 1.5vh;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 60%;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+#cost {
+    background-color: #dad97a;
+    padding: 10px;
+    font-size: 2vh;
+    font-size: 2vw;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#income {
+    background-color: #91e0da;
+    padding: 10px;
+    font-size: 2vh;
+    font-size: 2vw;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+#analysis-text {
+    font-size: 2vh;
+    font-size: 2vw;
+    color: saddlebrown;
+}
+.result {
+    font-size: 2vh;
+    font-size: 2vw;
+    margin: 20px auto;
+    width: 60%;
+    padding: 10px;
+    background-color: #ded1d1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(44, 100, 122);
+}
+
+.analysis {
+    font-size: 2vh;
+    font-size: 2vw;
+    margin: 20px auto;
+    width: 60%;
+    padding: 10px;
+    background-color: #f0e1d1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(72, 72, 181);    
+}
+
+.result p {
+    font-weight: bold;
+}
+
+#financeChart {
+    width: 80vw;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.5vh;
+    font-size: 1.5vw;
+}
