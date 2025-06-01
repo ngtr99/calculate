@@ -190,15 +190,21 @@ document.getElementById('calculate').addEventListener('click', function() {
     } else {
         renderChart();
     }
+    // Sort descending for best first
+const sortedCosts = [...costItems].sort((a, b) => b.value - a.value);
+const sortedIncomes = [...incomeItems].sort((a, b) => b.value - a.value);
 
-        document.getElementById('significant-cost').textContent = 
-            `1. The most significant cost item is ${costItems.length > 0 ? costItems[0].label : 'not specified'}, with a total of $${costData[0].toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}.\n`
-        document.getElementById('significant-income').textContent =
-            `2. The most significant income item is ${incomeItems.length > 0 ? incomeItems[0].label : 'not specified'}, with a total of $${incomeData[0].toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}.\n`
-        document.getElementById('worst-cost').textContent =
-            `3. The worst cost item is ${costItems.length > 0 ? costItems[costItems.length - 1].label : 'not specified'}, with a total of $${costData[costData.length - 1].toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}.\n`
-        document.getElementById('worst-income').textContent =
-            `4. The worst income item is ${incomeItems.length > 0 ? incomeItems[incomeItems.length - 1].label : 'not specified'}, with a total of $${incomeData[incomeData.length - 1].toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}.`;
+document.getElementById('significant-cost').textContent = 
+    `1. The most significant cost item is ${sortedCosts.length > 0 ? sortedCosts[0].label : 'not specified'}, with a total of $${sortedCosts.length > 0 ? sortedCosts[0].value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '0.00'}.\n`;
+
+document.getElementById('significant-income').textContent =
+    `2. The most significant income item is ${sortedIncomes.length > 0 ? sortedIncomes[0].label : 'not specified'}, with a total of $${sortedIncomes.length > 0 ? sortedIncomes[0].value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '0.00'}.\n`;
+
+document.getElementById('worst-cost').textContent =
+    `3. The worst cost item is ${sortedCosts.length > 0 ? sortedCosts[sortedCosts.length - 1].label : 'not specified'}, with a total of $${sortedCosts.length > 0 ? sortedCosts[sortedCosts.length - 1].value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '0.00'}.\n`;
+
+document.getElementById('worst-income').textContent =
+    `4. The worst income item is ${sortedIncomes.length > 0 ? sortedIncomes[sortedIncomes.length - 1].label : 'not specified'}, with a total of $${sortedIncomes.length > 0 ? sortedIncomes[sortedIncomes.length - 1].value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '0.00'}.`;
 });
 
 // This script handles delete all cost items and income items at once.
